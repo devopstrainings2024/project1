@@ -5,7 +5,7 @@
   <groupId>org.example</groupId>
   <artifactId>devops</artifactId>
   <packaging>war</packaging>
-  <version>release</version>
+  <version>SNAPSHOT</version>
   <name>devops Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -62,11 +62,11 @@
   <distributionManagement>
         <repository>
   <id>maven-releases</id>
-  <url>http://15.207.82.70:8081/repository/maven-releases/</url>
+  <url>http://3.92.177.238:8081/repository/maven-releases/</url>
     </repository>
       <snapshotRepository>
       <id>maven-snapshots</id>
-      <url>http://15.207.82.70:8081/repository/maven-snapshots/</url>
+      <url>http://3.92.177.238:8081/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
