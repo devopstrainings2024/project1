@@ -191,96 +191,36 @@
     </style>
   </head>
   <body>
-    <div class="testbox">
-      <form action="/">
-        <div class="banner">
-          <h1>DevOps Job Application Form</h1>
-        </div>
-        <div align="left">
- 
-        <p class="top-info"><b>Thank you for your interest in working with us. <br/> Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</b></p>
-        </div>
-        
-<div align="left">
+    <h1>Quiz: Identify the Version Control Tool</h1>
+    <form>
+        <p>Which of the following is a version control tool?</p>
+        <input type="radio" id="git" name="tool" value="git">
+        <label for="git">Git</label><br>
+        <input type="radio" id="maven" name="tool" value="maven">
+        <label for="maven">Maven</label><br>
+        <input type="radio" id="jenkins" name="tool" value="jenkins">
+        <label for="jenkins">Jenkins</label><br>
+        <input type="radio" id="docker" name="tool" value="docker">
+        <label for="docker">Docker</label><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="result"></p>
 
-  <p> We will get back to you shortly</p></div>
-        <div class="item">
-          <p>Name<span class="required">*</span></p>
-          <div class="name-item">
-            <input type="text" name="name" placeholder="First" required/>
-            <input type="text" name="name" placeholder="Last" required/>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="item">
-            <p>Email<span class="required">*</span></p>
-            <input type="text" name="name" required/>
-          </div>
-          <div class="item">
-            <p>Phone<span class="required">*</span></p>
-            <input type="text" name="name" required/>
-          </div>
-        </div>
-        <div class="position-item">
-          <div class="item">
-            <p>What position are you applying for?<span class="required">*</span></p>
-            <select required>
-              <option value="1">Job 1</option>
-              <option value="2">Job 2</option>
-              <option value="3">Job 3</option>
-              <option value="4">Job 4</option>
-              <option value="5">Job 5</option>
-            </select>
-          </div>
-          <div class="item">
-            <p>Available start date<span class="required">*</span></p>
-            <input type="date" name="bdate" required/>
-            <i class="fas fa-calendar-alt"></i>
-          </div>
-        </div>
-        <div class="question">
-          <p>What is your current employment status?<span class="required">*</span></p>
-          <div class="question-answer">
-            <div>
-              <input type="radio" value="none" id="radio_1" name="status" required/>
-              <label for="radio_1" class="radio"><span>Employed</span></label>
-            </div>
-            <div>
-              <input type="radio" value="none" id="radio_2" name="status" required/>
-              <label for="radio_2" class="radio"><span>Self-Employed</span></label>
-            </div>
-            <div>
-              <input type="radio" value="none" id="radio_3" name="status" required/>
-              <label for="radio_3" class="radio"><span>Unemployed</span></label>
-            </div>
-            <div>
-              <input type="radio" value="none" id="radio_4" name="status" required/>
-              <label for="radio_4" class="radio"><span>Student</span></label>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <p>Submit your resume by providing your resume URL or attach file:</p>
-          <input type="text" name="providing"/>
-  <input type="file" name="file" accept="file/*">
-        </div>
-        <div class="question">
-          <p>Would you like to list references</p>
-          <div class="question-answer">
-            <div>
-              <input type="radio" value="none" id="radio_5" name="references" />
-              <label for="radio_5" class="radio"><span>Yes</span></label>
-            </div>
-            <div>
-              <input type="radio" value="none" id="radio_6" name="references" />
-              <label for="radio_6" class="radio"><span>No</span></label>
-            </div>
-          </div>
-        </div>
-        <div class="btn-block">
-          <button type="submit" href="/">Apply For The Job</button>
-        </div>
-      </form>
-    </div>
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedTool = document.querySelector('input[name="tool"]:checked');
+            const result = document.getElementById('result');
+            if (selectedTool) {
+                if (selectedTool.value === 'git') {
+                    result.textContent = 'Correct! Git is a version control tool.';
+                } else {
+                    result.textContent = 'Incorrect. The correct answer is Git.';
+                }
+            } else {
+                result.textContent = 'Please select an option.';
+            }
+        });
+    </script>
   </body>
 </html>
