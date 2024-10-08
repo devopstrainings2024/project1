@@ -7,9 +7,7 @@
   <packaging>war</packaging>
 <version>release</version>
   <name>devops Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
-  <!-- HEllo world -->
   <properties>
   <sonar.organization>project1key</sonar.organization>
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
