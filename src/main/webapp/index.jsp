@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en" xml:lang="en">
 <head>
     <title>DevOps Job Application form</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
