@@ -18,7 +18,21 @@
         <input type="radio" id="docker" name="tool" value="docker">
         <label for="docker">Docker</label><br>
         <input type="submit" value="Submit">
+
     </form>
+       <form id="login-form" action="/submit-login" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" required placeholder="Enter your password">
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
     <p id="result"></p>
 
     <script>
